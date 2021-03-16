@@ -1,0 +1,46 @@
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 6%;
+  height: auto;
+}
+
+.dark-mood {
+  width: 5%;
+  height: auto;
+}
+
+.title {
+  margin-left: 3%;
+  font-size: 100%;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.title-logo__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 1%;
+}
+
+.dark-mood__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-end;
+}
