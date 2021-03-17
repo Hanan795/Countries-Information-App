@@ -1,10 +1,6 @@
 .country-card {
-  display: flex;
-  flex-direction: column;
   border: 1px solid black;
   border-radius: 20px;
-  width: 15%;
-  height: 10%;
   box-shadow: 3px 3px #e2dfdf;
 }
 
