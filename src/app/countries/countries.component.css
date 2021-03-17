@@ -1,0 +1,12 @@
+.countries{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+}
+
+.country-card {
+    width: 15%;
+    height: 10%;
+    margin: 2%;
+  }
