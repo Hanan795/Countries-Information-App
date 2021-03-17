@@ -1,19 +1,15 @@
 <div class="country-card">
   <div style="display: flex" class="circular--landscape">
-    <img
-      src="../../assets/1200px-Palestine_Flag.svg.png"
-      alt="flag"
-      class="country-flag"
-    />
+    <img src="{{ country.flag }}" alt="flag" class="country-flag" />
   </div>
   <div class="country-information">
     <p class="country-name">
-      Plaestine
+      {{ country["name"] }}
     </p>
     <div style="line-height: 2px">
-      <p style="color: #292828">Asia</p>
-      <p style="color: #292828">Juresalem</p>
-      <p style="color: #292828">4000000</p>
+      <p style="color: #292828">{{ country.region }}</p>
+      <p style="color: #292828">{{ country.capital }}</p>
+      <p style="color: #292828">{{ country.population }}</p>
     </div>
   </div>
 </div>

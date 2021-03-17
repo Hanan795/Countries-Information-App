@@ -1,3 +1,7 @@
 <div class="countries">
-    <app-country class="country-card"></app-country>
+  <app-country
+    *ngFor="let country of countries"
+    [country]="country"
+    class="country-card"
+  ></app-country>
 </div>
