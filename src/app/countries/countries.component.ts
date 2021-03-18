@@ -6,7 +6,7 @@ import { CountriesService } from './services/getAllCountries.service';
   templateUrl: './countries.component.html',
   styleUrls: ['./countries.component.css'],
 })
-export class CountriesComponent implements OnInit {
+export class CountriesComponent {
   countries: [];
 
   constructor(private countriesService: CountriesService) {}

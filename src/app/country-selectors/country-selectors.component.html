@@ -1,4 +1,9 @@
-<form class="form" autocomplete="off">
+<form
+  class="form"
+  autocomplete="off"
+  #selectForm="ngForm"
+  (ngSubmit)="selectForm(selectForm)"
+>
   <div class="search">
     <input
       name="search"
@@ -6,11 +11,25 @@
       type="text"
       placeholder="Search about country..."
       class="search-input"
+      (keydown)="keyDownFunction($event)"
     />
   </div>
   <div class="region-selection">
-    <select name="region" id="regionselect" class="select-region">
-      <option width="" value="none" selected disabled hidden>Select Region</option>
+    <select
+      name="region"
+      id="regionselect"
+      class="select-region"
+      ngModel
+      (ngModelChange)="navigateTo($event)"
+    >
+      <option width="" [ngValue]="null" selected disabled hidden>
+        Select Region
+      </option>
+      <option value="Africa">Africa</option>
+      <option value="Americas">Americas</option>
+      <option value="Asia">Asia</option>
+      <option value="Europe">Europe</option>
+      <option value="Oceania">Oceania</option>
     </select>
   </div>
 </form>
