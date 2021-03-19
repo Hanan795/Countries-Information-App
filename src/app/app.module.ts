@@ -12,7 +12,8 @@ import { CountrySelectorsComponent } from './country-selectors/country-selectors
 import { CountryComponent } from './country/country.component';
 import { RouterModule } from '@angular/router'
 import { routingTable } from './routes';
-import { RegionCountriesComponent } from './region-countries/region-countries.component'
+import { RegionCountriesComponent } from './region-countries/region-countries.component';
+import { CountryScreenComponent } from './country-screen/country-screen.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { RegionCountriesComponent } from './region-countries/region-countries.co
     CountrySelectorsComponent,
     CountryComponent,
     RegionCountriesComponent,
+    CountryScreenComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, RouterModule.forRoot(routingTable)],
   providers: [],

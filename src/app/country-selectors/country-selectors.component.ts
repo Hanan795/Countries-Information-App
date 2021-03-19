@@ -17,5 +17,12 @@ export class CountrySelectorsComponent {
     this.router.navigate(['/region', region]);
   }
 
-  keyDownFunction(event) {}
+  keyDownFunction(event) {
+    
+    if (event.keyCode === 13) {
+      if(event.target.value !== ""){
+        this.router.navigate(['countries/', event.target.value]);
+      }
+    }
+  }
 }

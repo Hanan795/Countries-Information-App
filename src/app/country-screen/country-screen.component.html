@@ -1,0 +1,22 @@
+<div style="display: flex; flex-direction: column">
+  <p class="titles">{{ selectedCountry.name }}</p>
+  <div  class="country">
+    <img src="{{ selectedCountry.flag }}" alt="flag" class="country-flag" />
+    <div class="country-info">
+      <p><b>Region:</b> {{ selectedCountry.region }}</p>
+      <p><b>Subregion:</b> {{ selectedCountry.subregion }}</p>
+      <p><b>Capital:</b> {{ selectedCountry.capital }}</p>
+      <p><b>Population: </b>{{ selectedCountry.population }}</p>
+      <p><b>Currency:</b> {{ selectedCountry.currencies[0].name }}</p>
+      <p><b>Language:</b> {{ selectedCountry.languages[0].name }}</p>
+    </div>
+  </div>
+  <p class="titles">{{ selectedCountry.name }} BoredersCountries</p>
+  <div class="countries-container">
+    <app-country
+      *ngFor="let country of borderCountries"
+      [country]="country[0]"
+      class="country-card"
+    ></app-country>
+  </div>
+</div>
