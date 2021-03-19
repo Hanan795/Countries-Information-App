@@ -1,0 +1,10 @@
+.country{
+    display: flex;
+    flex-direction: row;
+}
+
+.country-flag{
+    width: 50%;
+    height: auto;
+    display: flex;
+}
