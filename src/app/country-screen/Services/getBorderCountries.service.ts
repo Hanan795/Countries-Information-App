@@ -6,14 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BorderCountriesService {
   constructor(private http: HttpClient) {}
-  borderCountries:any = [];
-  getBorderCountries(countries) {
-    for (let i = 0; i < countries.length; i++) {
-      this.borderCountries.push(this.http.get(
-        'https://restcountries.eu/rest/v2/alpha?codes=' + countries[i]
-      ));
-    }
-
-    return this.borderCountries
+  borderCountries: any = [];
+  getBorderCountries(code) {
+    return this.http.get(
+      'https://restcountries.eu/rest/v2/alpha?codes=' + code
+    );
   }
 }

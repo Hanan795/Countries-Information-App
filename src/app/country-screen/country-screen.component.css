@@ -1,10 +1,38 @@
-.country{
-    display: flex;
-    flex-direction: row;
+.country {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5%;
+  padding: 2%;
 }
 
-.country-flag{
-    width: 50%;
-    height: auto;
-    display: flex;
+.country-flag {
+  width: 50%;
+  height: auto;
+  display: flex;
+}
+
+.countries-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10%;
+}
+
+.country-card {
+  width: 15%;
+  height: 10%;
+  margin: 2%;
+}
+
+.country-info {
+  flex-grow: 1;
+  font-size: 60%;
+  margin: 0 5%;
+}
+
+.titles{
+    font-size: 100%;
+    font-weight: bold;
+    font-style: oblique;
 }

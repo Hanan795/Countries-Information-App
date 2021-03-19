@@ -10,32 +10,35 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CountryScreenComponent implements OnInit {
   selectedCountry;
-  borderCountriesCodes
-  borderCountries
+  borderCountriesCodes = [];
+  borderCountries = [];
 
   constructor(
     private countryNameService: CountryNameService,
     private borderCountriesService: BorderCountriesService,
     private route: ActivatedRoute
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       this.countryNameService
         .getCountry(params.get('name'))
         .subscribe((country) => {
+          this.route.paramMap.subscribe(() => {
+            this.borderCountriesCodes = []
+            this.borderCountriesCodes = country[0].borders;
+            country[0].borders = []
+            this.borderCountriesCodes.forEach((borderCountry) => {
+              this.borderCountries = []
+              this.borderCountriesService
+                .getBorderCountries(borderCountry)
+                .subscribe((country:[]) => {
+                  this.borderCountries.push(country)
+                });
+              });
+          });
           this.selectedCountry = country[0];
-          this.borderCountriesCodes = country[0].borders;
         });
-      });
-    //   this.route.paramMap.subscribe(() => {
-    //   this.borderCountriesService
-    //     .getBorderCountries(this.borderCountriesCodes)
-    //     .subscribe((countries) => {
-    //       this.borderCountries = countries
-    //     })
-    //     console.log("borderCountries2",this.borderCountries)
-    // })
+    });
   }
 }
