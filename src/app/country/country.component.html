@@ -1,4 +1,4 @@
-<div class="country-card">
+<div class="country-card" [routerLink]="['/countries', country.name]">
   <div style="display: flex" class="circular--landscape">
     <img src="{{ country.flag }}" alt="flag" class="country-flag" />
   </div>
