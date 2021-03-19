@@ -13,7 +13,8 @@ import { CountryComponent } from './country/country.component';
 import { RouterModule } from '@angular/router'
 import { routingTable } from './routes';
 import { RegionCountriesComponent } from './region-countries/region-countries.component';
-import { CountryScreenComponent } from './country-screen/country-screen.component'
+import { CountryScreenComponent } from './country-screen/country-screen.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CountryScreenComponent } from './country-screen/country-screen.componen
     CountryComponent,
     RegionCountriesComponent,
     CountryScreenComponent,
+    PageNotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, RouterModule.forRoot(routingTable)],
   providers: [],
