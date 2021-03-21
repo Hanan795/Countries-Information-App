@@ -25,7 +25,7 @@ describe('AppComponent', () => {
         HeaderComponent,
         FooterComponent,
         CountriesComponent,
-        CountrySelectorsComponent
+        CountrySelectorsComponent,
       ],
     }).compileComponents();
   });
