@@ -7,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   element;
+  
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
-  darkMoodActivation() {
+  darkModeActivation() {
     this.element = document.body;
     this.element.classList.toggle('dark-mode');
   }
