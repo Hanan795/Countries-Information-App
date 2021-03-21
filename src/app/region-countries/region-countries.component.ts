@@ -12,7 +12,7 @@ export class RegionCountriesComponent implements OnInit {
 
   constructor(
     private rgionService: RegionService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit(): void {

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CountriesService } from './services/getAllCountries.service';
 import { CountriesComponent } from './countries.component';
+import { CountriesServiceMock } from '../mock/countries.service.mock';
 
 describe('CountriesComponent', () => {
   let component: CountriesComponent;
@@ -8,9 +9,11 @@ describe('CountriesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CountriesComponent ]
-    })
-    .compileComponents();
+      declarations: [CountriesComponent],
+      providers: [
+        { provide: CountriesService, useClass: CountriesServiceMock },
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -18,7 +21,6 @@ describe('CountriesComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });

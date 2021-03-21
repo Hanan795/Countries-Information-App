@@ -8,9 +8,8 @@ describe('CountryScreenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CountryScreenComponent ]
-    })
-    .compileComponents();
+      declarations: [CountryScreenComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -18,7 +17,6 @@ describe('CountryScreenComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });
