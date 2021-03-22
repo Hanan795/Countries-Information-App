@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RegionCountriesComponent implements OnInit {
   regionCountries: [];
-
+  isLoading = true;
   constructor(
     private rgionService: RegionService,
     private route: ActivatedRoute,
@@ -21,6 +21,7 @@ export class RegionCountriesComponent implements OnInit {
         .getRegion(params.get('region'))
         .subscribe((region: []) => {
           this.regionCountries = region;
+          this.isLoading = false;
         });
     });
   }
