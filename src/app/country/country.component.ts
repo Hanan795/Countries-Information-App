@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-country',
   templateUrl: './country.component.html',
@@ -8,7 +8,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class CountryComponent implements OnInit {
   @Input() country;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  countryClicked(country) {
+    this.router.navigate(['/countries', country.name]);
+  }
 }

@@ -1,4 +1,4 @@
-<div class="country-card" [routerLink]="['/countries', country.name]">
+<div class="country-card" (click)="countryClicked(country)">
   <div style="display: flex" class="circular--landscape">
     <img src="{{ country.flag }}" alt="flag" class="country-flag" />
   </div>
@@ -7,9 +7,9 @@
       {{ country["name"] }}
     </p>
     <div style="line-height: 2px">
-      <p style="color: black;">{{ country.region }}</p>
+      <p style="color: black" class="country-region">{{ country.region }}</p>
       <p style="color: black">{{ country.capital }}</p>
-      <p style="color: black">{{ country.population }}</p>
+      <p style="color: black">{{ country.population }} <b>peoples</b></p>
     </div>
   </div>
 </div>

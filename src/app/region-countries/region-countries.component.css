@@ -1,12 +1,14 @@
-.countries-container{
+.region-countries-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 10%;
 }
 
-.country-card {
-    width: 15%;
-    height: 10%;
+.region-country-card {
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 3px 3px #e2dfdf;
+    height: 200px;
+    flex: 0 0 20%;
     margin: 2%;
   }

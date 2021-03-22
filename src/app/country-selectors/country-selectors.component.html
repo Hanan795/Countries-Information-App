@@ -1,9 +1,4 @@
-<form
-  class="form"
-  autocomplete="off"
-  #selectForm="ngForm"
-  (ngSubmit)="selectForm(selectForm)"
->
+<div class="selsections">
   <div class="search">
     <input
       name="search"
@@ -19,8 +14,7 @@
       name="region"
       id="regionselect"
       class="select-region"
-      ngModel
-      (ngModelChange)="navigateTo($event)"
+      (change)="navigateTo($event.target.value)"
     >
       <option width="" [ngValue]="null" selected disabled hidden>
         Select Region
@@ -32,4 +26,4 @@
       <option value="Oceania">Oceania</option>
     </select>
   </div>
-</form>
+</div>
