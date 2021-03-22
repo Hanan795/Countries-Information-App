@@ -1,6 +1,9 @@
-<div style="display: flex; flex-direction: column">
+<div *ngIf="error">
+  <h1 style="color: red; text-align: center">{{ statusMessage }}</h1>
+</div>
+<div style="display: flex; flex-direction: column" *ngIf="!error">
   <p class="titles">{{ selectedCountry.name }}</p>
-  <div  class="country">
+  <div class="country">
     <img src="{{ selectedCountry.flag }}" alt="flag" class="country-flag" />
     <div class="country-info">
       <p><b>Region:</b> {{ selectedCountry.region }}</p>
@@ -12,11 +15,16 @@
     </div>
   </div>
   <p class="titles">{{ selectedCountry.name }} BoredersCountries</p>
-  <div class="countries-container">
+  <div class="countries-container" *ngIf="borderCountries.length !== 0">
     <app-country
       *ngFor="let country of borderCountries"
       [country]="country[0]"
       class="country-card"
     ></app-country>
+  </div>
+  <div style="margin: 3%" *ngIf="borderCountries.length === 0">
+    <p style="font-style: oblique; font-weight: bold">
+      There are no border countries for {{ selectedCountry.name }}
+    </p>
   </div>
 </div>

@@ -4,12 +4,14 @@
   flex-wrap: wrap;
   margin: 5%;
   padding: 2%;
+  justify-content: center;
 }
 
 .country-flag {
   width: 50%;
   height: auto;
   display: flex;
+  border: 1px solid black;
 }
 
 .countries-container {
@@ -17,22 +19,29 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 10%;
+  justify-content: center;
 }
 
 .country-card {
-  width: 15%;
-  height: 10%;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 3px 3px #e2dfdf;
+  height: 200px;
+  flex: 0 0 20%;
   margin: 2%;
 }
 
 .country-info {
   flex-grow: 1;
-  font-size: 60%;
+  font-size: 120%;
   margin: 0 5%;
+  font-style: oblique;
 }
 
-.titles{
-    font-size: 100%;
-    font-weight: bold;
-    font-style: oblique;
+.titles {
+  font-size: 150%;
+  font-weight: bold;
+  font-style: oblique;
+  margin-left: 3%;
+  color: red;
 }
