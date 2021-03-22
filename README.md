@@ -6,9 +6,13 @@ A project created as a one of Angular learning phase requirements for GFS Intern
 
 A website that uses a [REST Countries API](https://restcountries.eu/) to display countries and some information about it on the home screen. It gives the user the ability to search about any country by entering its name, so more details, and border countries for this country will be shown to his/her. It also has a filter that will categorize the countries based on their regions. The website also has a dark mode.
 
+# Website Link 
+
+[Countries-Browser](https://countries-browser.firebaseapp.com/)
+
 ## User Journey
 
-![User Journey](https://user-images.githubusercontent.com/56485006/111059716-748d8e80-84a0-11eb-88dd-f0e42ebb051c.png)
+![User Journey](https://user-images.githubusercontent.com/56485006/111968820-3f1d1c80-8b02-11eb-9a10-97cc20f04019.png)
 
 ## Use Story
 
@@ -37,6 +41,10 @@ $ npm start or ng serve
 ```
 
 ## How to Run the Tests?
+
+```shell
+$ npm test
+```
 
 ## Used Technologies
 
