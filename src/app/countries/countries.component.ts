@@ -8,12 +8,15 @@ import { CountriesService } from './services/getAllCountries.service';
 })
 export class CountriesComponent {
   countries: [];
-
+  isLoading = true;
+  statusMessage = "Loading..."
+  
   constructor(private countriesService: CountriesService) {}
 
   ngOnInit(): void {
     this.countriesService.getAllCountries().subscribe((countries: []) => {
       this.countries = countries;
+      this.isLoading = false;
     });
   }
 }

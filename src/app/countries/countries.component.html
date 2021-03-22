@@ -1,4 +1,7 @@
-<div class="countries">
+<div *ngIf="isLoading">
+  <h1 style="font-weight: bold; text-align: center">{{ statusMessage }}</h1>
+</div>
+<div class="countries" *ngIf="!isLoading">
   <app-country
     *ngFor="let country of countries"
     [country]="country"

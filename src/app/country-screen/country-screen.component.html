@@ -1,7 +1,10 @@
-<div *ngIf="error">
+<div *ngIf="isLoading">
+  <h1 style="font-weight: bold; text-align: center">{{ statusMessage }}</h1>
+</div>
+<div *ngIf="error && !isLoading">
   <h1 style="color: red; text-align: center">{{ statusMessage }}</h1>
 </div>
-<div style="display: flex; flex-direction: column" *ngIf="!error">
+<div style="display: flex; flex-direction: column" *ngIf="!error && !isLoading">
   <p class="titles">{{ selectedCountry.name }}</p>
   <div class="country">
     <img src="{{ selectedCountry.flag }}" alt="flag" class="country-flag" />

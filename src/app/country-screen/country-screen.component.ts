@@ -14,17 +14,20 @@ export class CountryScreenComponent implements OnInit {
   borderCountries = [];
   statusMessage = 'Loading...';
   error = false;
+  isLoading = true;
 
   constructor(
     private countryNameService: CountryNameService,
     private borderCountriesService: BorderCountriesService,
     private route: ActivatedRoute
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       this.countryNameService.getCountry(params.get('name')).subscribe(
         (country) => {
+          this.error = false;
           this.route.paramMap.subscribe(() => {
             this.borderCountriesCodes = [];
             this.borderCountriesCodes = country[0].borders;
@@ -35,8 +38,9 @@ export class CountryScreenComponent implements OnInit {
                 .getBorderCountries(borderCountry)
                 .subscribe(
                   (country: []) => {
-                    console.log(country);
+                    this.error = false;
                     this.borderCountries.push(country);
+                    this.isLoading = false;
                   },
                   (error) => {
                     this.error = true;
@@ -47,6 +51,7 @@ export class CountryScreenComponent implements OnInit {
             });
           });
           this.selectedCountry = country[0];
+          this.isLoading = false;
         },
         (error) => {
           this.error = true;

@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "countries-browser"
+  },
+    "targets": {
+    "countries-browser": {
+      "hosting": {
+        "production": [
+          "countries-browser"
+        ],
+        "staging": [
+          "countries-browser-staging"
+        ]
+      }
+    }
   }
 }
